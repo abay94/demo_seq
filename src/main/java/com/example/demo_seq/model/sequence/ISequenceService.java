@@ -47,6 +47,11 @@ public class ISequenceService implements SequenceService {
                     carry = false;
                     chars[i]++;
                 }
+            } else {
+                StringBuilder sbPrefix = new StringBuilder();
+                sbPrefix.append(name, 0, i+1);
+                sb.append(sbPrefix.reverse());
+                break;
             }
 
             sb.append(chars[i]);
